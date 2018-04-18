@@ -1,0 +1,17 @@
+﻿<Window x:Class="finalproject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:finalproject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="441.778" Width="680.556">
+    <Window.Resources>
+        <FontWeight x:Key="FontWeight1">Normal</FontWeight>
+    </Window.Resources>
+    <Grid Margin="0,0,16.4,9.8">
+        <Button x:Name="btn_JobSeeker" Content="Job Seeker" Foreground="black" Background="Transparent" HorizontalAlignment="Left" Margin="399,148,0,0" VerticalAlignment="Top" Width="145" Height="65" FontSize="16" FontFamily="Segoe UI Semibold" RenderTransformOrigin="1.423,0.467" Click="btn_JobSeeker_Click"/>
+        <Button x:Name="btn_Admin" Content="Admin" Foreground="black" Background="Transparent" HorizontalAlignment="Left" Margin="139,148,0,0" VerticalAlignment="Top" Width="129" Height="65" FontSize="16" FontFamily="Segoe UI Semibold" FontStyle="Italic" FontWeight="{DynamicResource FontWeight1}" Click="btn_Admin_Click"/>
+        <Label x:Name="label" Content="Select Account Type" HorizontalAlignment="Left" Margin="280,76,0,0" VerticalAlignment="Top" Width="228"/>
+    </Grid>
+</Window>
