@@ -23,5 +23,25 @@ namespace finalproject.User
         {
             InitializeComponent();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void FirstName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void LastName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

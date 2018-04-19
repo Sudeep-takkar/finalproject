@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="Register" Height="550" Width="900">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="200*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="FirstName" HorizontalAlignment="Left" Height="23" Margin="10,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Grid.Column="1" TextChanged="FirstName_TextChanged"/>
+        <Label HorizontalAlignment="Left" Margin="108.333,79,0,0" VerticalAlignment="Top" Grid.Column="1" Height="10" Width="10"/>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="70,29,0,0" VerticalAlignment="Top" Width="154" Grid.ColumnSpan="2" Height="25"/>
+        <TextBox x:Name="LastName" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="9.667,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" TextChanged="LastName_TextChanged"/>
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="69,77,0,0" VerticalAlignment="Top" Width="154" Height="25"/>
+
     </Grid>
 </Window>
