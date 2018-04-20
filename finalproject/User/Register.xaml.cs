@@ -25,7 +25,7 @@ namespace finalproject.User
     {
         
         internal List<Users> usersList = new List<Users>();
-        
+        public string USER_DATA = @"..\..\Xmls\user.xml";
         public Register()
         {
             InitializeComponent();
@@ -47,10 +47,10 @@ namespace finalproject.User
                 Province.Items.Add(" " + element.Value);
             }
 
-            XDocument oldUsers = XDocument.Load(@"..\..\Xmls\user.xml");
+            XDocument oldUsers = XDocument.Load(USER_DATA);
             foreach (XElement element in oldUsers.Element("users").Elements("user"))
             {
-                Users userObject = new Users(element.Element("userId").Value, element.Element("firstName").Value, element.Element("lastName").Value, element.Element("phone").Value, element.Element("email").Value, element.Element("password").Value, element.Element("address1").Value, element.Element("address2").Value, element.Element("city").Value, element.Element("province").Value, element.Element("zipCode").Value, element.Element("jobType").Value, element.Element("education").Value);
+                Users userObject = new Users( element.Element("firstName").Value, element.Element("lastName").Value, element.Element("phone").Value, element.Element("email").Value, element.Element("password").Value, element.Element("education").Value, element.Element("address1").Value, element.Element("address2").Value, element.Element("city").Value, element.Element("province").Value, element.Element("zipCode").Value, element.Element("jobType").Value);
                 usersList.Add(userObject);
             }
 
@@ -141,26 +141,48 @@ namespace finalproject.User
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Users userObject = new Users("4", FirstName.Text, LastName.Text, PhoneNumber.Text, Email.Text, Password.Text, Education.Text, Address1.Text, Address2.Text, City.Text, Province.Text, ZipCode.Text, JobType.Text);
+            Users userObject = new Users(FirstName.Text, LastName.Text, PhoneNumber.Text, Email.Text, Password.Text, Education.Text, Address1.Text, Address2.Text, City.Text, Province.Text, ZipCode.Text, JobType.Text);
             usersList.Add(userObject);
+
+            MessageBox.Show(userObject.ToString());
+            
             SaveUsers();
         }
         private void SaveUsers()
         {
 
-            /************
+            int userId = 1;
+            
+            
+            /************/
             XmlWriterSettings settings = new XmlWriterSettings();
             settings.Indent = true;
             settings.IndentChars = "\t";
-            XmlWriter xmlObject = XmlWriter.Create(@"..\..\Xmls\userTest.xml", settings);
+            XmlWriter xmlObject = XmlWriter.Create(USER_DATA, settings);
             xmlObject.WriteStartDocument();
             xmlObject.WriteStartElement("users");
+
+            
 
             foreach (var user in usersList)
             {
                 xmlObject.WriteStartElement("user");
-                xmlObject.WriteElementString("VehicleType", user.FirstName);
+                xmlObject.WriteElementString("firstName", user.FirstName);
+                xmlObject.WriteElementString("lastName", user.LastName);
+                xmlObject.WriteElementString("email", user.Email);
+                xmlObject.WriteElementString("password", user.Password);
+                xmlObject.WriteElementString("phone", user.PhoneNumber);
+                xmlObject.WriteElementString("address1", user.Address1);
+                xmlObject.WriteElementString("address2", user.Address2);
+                xmlObject.WriteElementString("city", user.City);
+                xmlObject.WriteElementString("province", user.Province);
+                xmlObject.WriteElementString("zipCode", user.ZipCode);
+                xmlObject.WriteElementString("education", user.Education);
+                xmlObject.WriteElementString("jobType", user.JobType);
+                xmlObject.WriteElementString("userId", userId.ToString());
                 xmlObject.WriteEndElement();
+
+                userId++;
             }
             xmlObject.WriteEndElement();
             xmlObject.Close();
