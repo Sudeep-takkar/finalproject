@@ -24,6 +24,10 @@ namespace finalproject
         public MainWindow()
         {
             InitializeComponent();
+
+            finalproject.UserLogin userLogin = new finalproject.UserLogin();
+            this.Hide();
+            userLogin.Show();
         }
 
         private void btn_Admin_Click(object sender, RoutedEventArgs e)

@@ -43,12 +43,27 @@ namespace finalproject
             {
                 MessageBox.Show("Login Successfull" + logIn.FirstName.ToString());
                 MessageBox.Show("user type is " + logIn.AccountType.ToString());
+
+                if (logIn.AccountType.ToString() == "admin")
+                {
+                    finalproject.Admin.Dashboard dash = new finalproject.Admin.Dashboard();
+                    this.Hide();
+                    dash.ShowDialog();
+                }
+                
             }
             else
             {
                 MessageBox.Show("Not valid logins");
             }
             
+        }
+
+        private void Register_Click(object sender, RoutedEventArgs e)
+        {
+            finalproject.User.Register userRegister = new finalproject.User.Register();
+            this.Hide();
+            userRegister.Show();
         }
     }
 }

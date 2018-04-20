@@ -38,6 +38,10 @@ namespace finalproject.Admin
             grdInfo.CellEditEnding += grdInfo_CellEditEnding;
         }
 
+        public Dashboard()
+        {
+        }
+
         private void grdInfo_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
         {
 

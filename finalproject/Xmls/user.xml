@@ -1,99 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <users>
 	<user>
-		<firstName>John</firstName>
-		<lastName>Max</lastName>
-		<email>john@gmail.com</email>
+		<firstName>Joan</firstName>
+		<lastName>Admin</lastName>
+		<email>admin@gmail.com</email>
 		<password>123456</password>
 		<phone>5195050065</phone>
-		<address1>#45, Test</address1>
-		<address2 />
+		<address1>First Line</address1>
+		<address2>Secound line</address2>
 		<city>Kitchner</city>
 		<province>Ontario</province>
 		<zipCode>M2F3G6</zipCode>
-		<education>BSc in Cmpouter</education>
-		<jobType>HR</jobType>
+		<education>Owner</education>
+		<jobType>Admin</jobType>
 		<userId>1</userId>
-		<accountType>user</accountType>
+		<accountType>admin</accountType>
 	</user>
 	<user>
-		<firstName>John</firstName>
-		<lastName>Max</lastName>
-		<email>john@gmail.com</email>
-		<password>123456</password>
-		<phone>5195050065</phone>
-		<address1>#45, Test</address1>
-		<address2 />
-		<city>Kitchner</city>
-		<province>Ontario</province>
-		<zipCode>M2F3G6</zipCode>
-		<education>BSc in Cmpouter</education>
-		<jobType>HR</jobType>
-		<userId>2</userId>
-		<accountType>user</accountType>
-	</user>
-	<user>
-		<firstName>hello</firstName>
-		<lastName>new</lastName>
-		<email>dklflks@fghf.com</email>
-		<password>sdmfsdmf;l</password>
-		<phone>347598</phone>
-		<address1>dllkdfmnfkn</address1>
-		<address2>lknlkqfnl</address2>
-		<city>nlbl</city>
-		<province> Nova Scotia</province>
-		<zipCode>HJGJ</zipCode>
-		<education>NLNWLN</education>
-		<jobType> Manager</jobType>
-		<userId>3</userId>
-		<accountType>user</accountType>
-	</user>
-	<user>
-		<firstName>hello</firstName>
-		<lastName>new</lastName>
-		<email>dklflks@fghf.com</email>
-		<password>sdmfsdmf;l</password>
-		<phone>347598</phone>
-		<address1>dllkdfmnfkn</address1>
-		<address2>lknlkqfnl</address2>
-		<city>nlbl</city>
-		<province> Nova Scotia</province>
-		<zipCode>HJGJ</zipCode>
-		<education>NLNWLN</education>
-		<jobType> Manager</jobType>
-		<userId>4</userId>
-		<accountType>user</accountType>
-	</user>
-	<user>
-		<firstName>hello</firstName>
-		<lastName>new</lastName>
-		<email>dklflks@fghf.com</email>
-		<password>sdmfsdmf;l</password>
-		<phone>347598</phone>
-		<address1>dllkdfmnfkn</address1>
-		<address2>lknlkqfnl</address2>
-		<city>nlbl</city>
-		<province> Nova Scotia</province>
-		<zipCode>HJGJ</zipCode>
-		<education>NLNWLN</education>
-		<jobType> Manager</jobType>
-		<userId>5</userId>
-		<accountType>user</accountType>
-	</user>
-	<user>
-		<firstName>Harjeevan</firstName>
-		<lastName>user</lastName>
+		<firstName>Test</firstName>
+		<lastName>User</lastName>
 		<email>test@gmail.com</email>
 		<password>123456</password>
-		<phone>2304590</phone>
-		<address1>test@gmail.com</address1>
-		<address2>test@gmail.com</address2>
-		<city>test@gmail.com</city>
-		<province> Alberta</province>
-		<zipCode>43fdgdfg</zipCode>
-		<education>sfdsdfsd</education>
+		<phone>312456789</phone>
+		<address1>Addressline1</address1>
+		<address2>Address line2</address2>
+		<city>Bramma</city>
+		<province> Manitoba</province>
+		<zipCode>625DG56</zipCode>
+		<education>Education</education>
 		<jobType> Manager</jobType>
-		<userId>6</userId>
+		<userId>2</userId>
 		<accountType>user</accountType>
 	</user>
 </users>
