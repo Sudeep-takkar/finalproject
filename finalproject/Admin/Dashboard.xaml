@@ -5,25 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:finalproject.Admin"
         mc:Ignorable="d"
-        Title="Dashboard" Height="315.113" Width="480.605">
-    <Grid>
+        Title="Dashboard" Height="428.838" Width="748.333">
+    <Grid Height="401" VerticalAlignment="Top" Margin="0,0,47,-3">
         <StackPanel HorizontalAlignment="Left" Height="284" VerticalAlignment="Top" Width="130">
-            <Label Content="           Admin" FontWeight="Medium" />
+            <Label Content="Admin" FontWeight="Medium" />
         </StackPanel>
         <Button Content="Logout" HorizontalAlignment="Left" Margin="18,233,0,0" VerticalAlignment="Top" Width="60" Height="27" Click="Button_Click" />
-        <StackPanel HorizontalAlignment="Left" Height="73" Margin="135,0,0,0" VerticalAlignment="Top" Width="296" Orientation="Horizontal">
-            <ComboBox Margin="10,32,10,19" Width="75"/>
-            <ComboBox Margin="10,32,10,19" Width="77"/>
-            <ComboBox Margin="10,32,10,19" Width="76"/>
+        <StackPanel HorizontalAlignment="Left" Height="73" Margin="135,0,0,0" VerticalAlignment="Top" Width="548" Orientation="Horizontal">
+            <Label x:Name="label" Content="Job Type" Width="62" Margin="0,30,-73,19"/>
+            <ComboBox x:Name="cbJobType" Margin="89,30,6,21" Width="75" SelectionChanged="cbJobType_SelectionChanged">
+                <ComboBoxItem Content="All" />
+                <ComboBoxItem Content="HR"/>
+                <ComboBoxItem Content="Software Engineer"/>
+                <ComboBoxItem Content="Quality Analyst"/>
+                <ComboBoxItem Content="Financial Analyst"/>
+            </ComboBox>
+            <!--<Label x:Name="label_Copy" Content="Date" Width="62" Margin="15,30,-73,19" RenderTransformOrigin="1.091,0.784"/>
+            <ComboBox x:Name="cbDate" Margin="99,32,9,19" Width="77" SelectionChanged="cbDate_SelectionChanged" >
+                <ComboBoxItem Content="All" />
+                <ComboBoxItem Content="Last Week"/>
+                <ComboBoxItem Content="Last Month"/>
+            </ComboBox>-->
+            <Label x:Name="label_Copy1" Content="Time Slot" Width="62" Margin="20,30,-73,19" RenderTransformOrigin="1.091,0.784"/>
+            <ComboBox x:Name="cbTime" Margin="90,30,8,21" Width="76" SelectionChanged="cbTime_SelectionChanged">
+                <ComboBoxItem Content="All" />
+                <ComboBoxItem Content="10:00 am"/>
+                <ComboBoxItem Content="10:30 am"/>
+                <ComboBoxItem Content="11:00 am"/>
+                <ComboBoxItem Content="11:30 am"/>
+                <ComboBoxItem Content="12:00 pm"/>
+                <ComboBoxItem Content="12:30 pm"/>
+                <ComboBoxItem Content="01:00 pm"/>
+            </ComboBox>
         </StackPanel>
-        <DataGrid HorizontalAlignment="Left" Height="159" Margin="147,101,0,0" VerticalAlignment="Top" Width="307">
+        <DataGrid x:Name="grdInfo" HorizontalAlignment="Left" Height="218" Margin="147,101,0,0" VerticalAlignment="Top" Width="500">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
-                <DataGridTextColumn Header="Job Type" Binding="{Binding JobType}"/>
-                <DataGridTextColumn Header="Date" Binding="{Binding Date}"/>
-                <DataGridTextColumn Header="Time" Binding="{Binding Time}"/>
-                <DataGridTextColumn Header="Action" Binding="{Binding Action}"/>
-
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

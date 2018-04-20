@@ -1,94 +1,92 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<users>
-  <user>
-    <firstName>John</firstName>
-    <lastName>Max</lastName>
-    <email>john@gmail.com</email>
-    <password>123456</password>
-    <phone>5195050065</phone>
-    <address1>#45, Test</address1>
-    <address2></address2>
-    <city>Kitchner</city>
-    <province>Ontario</province>
-    <zipCode>M2F3G6</zipCode>
-    <education>BSc in Computer</education>
+<appointments>
+  <appointment>
+    <name>John X</name>
+    <email>1</email>
+    <password>1</password>
+    <jobType>Software Engineer</jobType>
+    <accountType>Admin</accountType>
+    <date>2018-04-01</date>
+    <time>10:30 AM</time>
+    <status>InProcess</status>
+    <account>1</account>
+  </appointment>
+  <appointment>
+    <name>John</name>
+    <email>1</email>
+    <password>12</password>
     <jobType>HR</jobType>
-    <userType>User</userType>
-    <appointments>
-      <appointment>
-        <jobType>HR</jobType>
-        <id>315415</id>
-        <date>2018-04-01</date>
-        <time>10:30 PM</time>
-        <status>InProsess</status>
-      </appointment>
-      <appointment>
-        <jobType>HR</jobType>
-        <id>315415</id>
-        <date>2018-04-01</date>
-        <time>10:30 PM</time>
-        <status>InProsess</status>
-      </appointment>
-      <appointment>
-        <jobType>HR</jobType>
-        <id>315415</id>
-        <date>2018-04-01</date>
-        <time>10:30 PM</time>
-        <status>InProsess</status>
-      </appointment>
-    </appointments>
-  </user>
-  <user>
-    <firstName>John</firstName>
-    <lastName>Max</lastName>
-    <email>john@gmail.com</email>
-    <password>123456</password>
-    <phone>5195050065</phone>
-    <address1>#45, Test</address1>
-    <address2></address2>
-    <city>Kitchener</city>
-    <province>Ontario</province>
-    <zipCode>M2F3G6</zipCode>
-    <education>BSc in Cmpouter</education>
+    <accountType>User</accountType>
+    <date>2018-04-01</date>
+    <time>10:00 AM</time>
+    <status>InProsess</status>
+    <account>2</account>
+  </appointment>
+  <appointment>
+    <name>John</name>
+    <email>1</email>
+    <password>123</password>
+    <jobType>Quality Analyst</jobType>
+    <accountType>User</accountType>
+    <date>2018-04-01</date>
+    <time>10:30 PM</time>
+    <status>InProsess</status>
+    <account>2</account>
+  </appointment>
+  <appointment>
+    <name>John</name>
+    <email>1</email>
+    <password>124</password>
     <jobType>HR</jobType>
-    <userType>User</userType>
-    <appointments>
-      <appointment>
-        <jobType>HR</jobType>
-        <id>315415</id>
-        <date>2018-04-01</date>
-        <time>10:30 PM</time>
-        <status>InProsess</status>
-      </appointment>
-      <appointment>
-        <jobType>HR</jobType>
-        <id>315415</id>
-        <date>2018-04-01</date>
-        <time>10:30 PM</time>
-        <status>InProsess</status>
-      </appointment>
-      <appointment>
-        <jobType>HR</jobType>
-        <id>315415</id>
-        <date>2018-04-01</date>
-        <time>10:30 PM</time>
-        <status>InProsess</status>
-      </appointment>
-    </appointments>
-  </user>
-  <user>
-    <firstName>John</firstName>
-    <lastName>Max</lastName>
-    <email>john@gmail.com</email>
-    <password>123456</password>
-    <phone>5195050065</phone>
-    <address1>#45, Test</address1>
-    <address2></address2>
-    <city>Kitchner</city>
-    <province>Ontario</province>
-    <zipCode>M2F3G6</zipCode>
-    <education>BSc in Computer</education>
+    <accountType>User</accountType>
+    <date>2018-04-01</date>
+    <time>10:30 PM</time>
+    <account>2</account>
+    <status>InProsess</status>
+  </appointment>
+  <appointment>
+    <name>John</name>
+    <email>1</email>
+    <account>2</account>
+    <password>1256</password>
     <jobType>HR</jobType>
-    <userType>Admin</userType>
-  </user>
-</users>
+    <accountType>User</accountType>
+    <date>2018-04-01</date>
+    <time>10:30 PM</time>
+    <status>InProsess</status>
+  </appointment>
+  <appointment>
+    <name>John</name>
+    <email>1</email>
+    <password>111</password>
+    <jobType>HR</jobType>
+    <accountType>User</accountType>
+    <date>2018-04-01</date>
+    <account>2</account>
+    <time>10:30 PM</time>
+    <status>InProsess</status>
+  </appointment>
+  <appointment>
+    <name>John</name>
+    <email>1</email>
+    <password>122222</password>
+    <jobType>HR</jobType>
+    <account>User</account>
+    <accountType>User</accountType>
+    <date>2018-04-01</date>
+    <time>10:30 PM</time>
+    <status>InProsess</status>
+    <account>2</account>
+  </appointment>
+  <appointment>
+    <name>John</name>
+    <jobType>HR</jobType>
+    <email>1</email>
+    <password>92</password>
+    <accountType>User</accountType>
+    <account>2</account>
+    <date>2018-04-01</date>
+    <time>10:30 PM</time>
+    <status>InProsess</status>
+  </appointment>
+</appointments>

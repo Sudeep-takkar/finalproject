@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace finalproject.Admin
 {
@@ -35,7 +36,10 @@ namespace finalproject.Admin
                 //EnumerableRowCollection<DataRow> query;
                 if (File.Exists(@"..\..\Xmls\appointments.xml"))
                 {
-                    dataSet.ReadXml(@"..\..\Xmls\appointments.xml");
+                    XElement xml = XElement.Load(@"..\..\Xmls\appointments.xml");
+                    //dataSet.ReadXml(@"..\..\Xmls\appointments.xml");
+                    using (var reader = xml.CreateReader())
+                        dataSet.ReadXml(reader);
                 }
                 else
                 {
@@ -49,23 +53,30 @@ namespace finalproject.Admin
         }
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            foreach (DataRow row in dataSet.Tables[0].Rows)
+            bool isAdminFound = false;
+            DataColumnCollection columns = dataSet.Tables[0].Columns;
+            if (columns.Contains("AccountType"))
             {
-                if (row["userType"].ToString() == "Admin")
+                foreach (DataRow row in dataSet.Tables[0].Rows)
                 {
-                    if(row["email"].ToString() == txtEmail.Text && row["password"].ToString() == txtPass.Text)
+                    if (row["AccountType"].ToString() == "Admin")
                     {
-                        Dashboard dash = new Dashboard();
-                        this.Hide();
-                        dash.Show();
+                        if (row["email"].ToString() == txtEmail.Text && row["password"].ToString() == txtPass.Text)
+                        {
+                            isAdminFound = true;
+                            Dashboard dash = new Dashboard(dataSet);
+                            this.Hide();
+                            dash.ShowDialog();
+                        }
+                        else if (row["email"].ToString() == txtEmail.Text && row["password"].ToString() != txtPass.Text)
+                        {
+                            isAdminFound = true;
+                            MessageBox.Show("Please check your details.");
+                        }
                     }
-                    else if(row["email"].ToString() == txtEmail.Text && row["password"].ToString() != txtPass.Text)
+                    if (!isAdminFound)
                     {
-                        MessageBox.Show("Please check your details.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Sorry, We are unable to recognize you.");
+                        MessageBox.Show("Sorry, we are unable to recognize you.");
                     }
                 }
             }

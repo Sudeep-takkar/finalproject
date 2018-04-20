@@ -125,5 +125,8 @@
       <SubType>Designer</SubType>
     </Resource>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Xmls\user.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
