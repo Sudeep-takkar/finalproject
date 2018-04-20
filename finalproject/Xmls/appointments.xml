@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <appointments>
   <appointment>
+    <id>1</id>
     <name>John X</name>
     <email>1</email>
     <password>1</password>
@@ -12,6 +13,7 @@
     <account>1</account>
   </appointment>
   <appointment>
+    <id>2</id>
     <name>John</name>
     <email>1</email>
     <password>12</password>
@@ -23,6 +25,7 @@
     <account>2</account>
   </appointment>
   <appointment>
+    <id>3</id>
     <name>John</name>
     <email>1</email>
     <password>123</password>
@@ -34,6 +37,7 @@
     <account>2</account>
   </appointment>
   <appointment>
+    <id>4</id>
     <name>John</name>
     <email>1</email>
     <password>124</password>
@@ -45,6 +49,7 @@
     <status>InProsess</status>
   </appointment>
   <appointment>
+    <id>6</id>
     <name>John</name>
     <email>1</email>
     <account>2</account>
@@ -56,6 +61,7 @@
     <status>InProsess</status>
   </appointment>
   <appointment>
+    <id>7</id>
     <name>John</name>
     <email>1</email>
     <password>111</password>
@@ -67,6 +73,7 @@
     <status>InProsess</status>
   </appointment>
   <appointment>
+    <id>8</id>
     <name>John</name>
     <email>1</email>
     <password>122222</password>
@@ -79,6 +86,7 @@
     <account>2</account>
   </appointment>
   <appointment>
+    <id>9</id>
     <name>John</name>
     <jobType>HR</jobType>
     <email>1</email>

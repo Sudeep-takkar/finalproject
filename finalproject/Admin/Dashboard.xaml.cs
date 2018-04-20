@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -34,6 +35,29 @@ namespace finalproject.Admin
             //cbDate.SelectedIndex = 0;
             cbJobType.SelectedIndex = 0;
             cbTime.SelectedIndex = 0;
+            grdInfo.CellEditEnding += grdInfo_CellEditEnding;
+        }
+
+        private void grdInfo_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+
+            //DataSet ds = new DataSet();
+            ////ds.Tables[0].Rows.Cast<DataRow>().Where(
+            ////    r => r.ItemArray[0] == e.Row("Id")).ToList().ForEach(r => r.Delete());
+            string x = e.Row.GetIndex().ToString();
+            string y = e.Column.DisplayIndex.ToString();
+            //MessageBox.Show(grdInfo.SelectedValue.ToString(), );
+            //if (grdInfo.Columns[e.Column.DisplayIndex].ToString() == "Reference")
+            //{
+            //    //your code goes here
+            //}
+            //MessageBox.Show(e.Row.ToString(), sender.ToString());
+            //ds.Tables[0] = (DataTable)(grdInfo.ItemsSource);
+            //ds.WriteXml("your path here");
+            //DataSet ds = new DataSet("abc");
+            //ds.ReadXml("abcd.xml");
+
+            //dataGrid1.DataSource = ds.Tables[0];
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -57,11 +81,12 @@ namespace finalproject.Admin
             cloneSet.Tables["appointment"].Columns["time"].ColumnName = "Time";
             cloneSet.Tables["appointment"].Columns["status"].ColumnName = "Status";
             cloneSet.Tables["appointment"].Columns["accountType"].ColumnName = "Account Type";
+            cloneSet.Tables["appointment"].Columns["id"].ColumnName = "Id";
             EnumerableRowCollection<DataRow> query = from datatable in cloneSet.Tables[0].AsEnumerable()
                                                      orderby datatable.Field<string>("Name")
                                                      select datatable;
             DataView view = query.AsDataView();
-            var table = view.ToTable(false, "Name", "Job Type", "Date", "Time", "Status", "Account Type");
+            var table = view.ToTable(false,"Id", "Name", "Job Type", "Date", "Time", "Status", "Account Type");
             grdInfo.ItemsSource = table.AsDataView();
         }
 
@@ -74,6 +99,7 @@ namespace finalproject.Admin
             cloneSet.Tables["appointment"].Columns["time"].ColumnName = "Time";
             cloneSet.Tables["appointment"].Columns["status"].ColumnName = "Status";
             cloneSet.Tables["appointment"].Columns["accountType"].ColumnName = "Account Type";
+            cloneSet.Tables["appointment"].Columns["id"].ColumnName = "Id";
             ComboBoxItem cb = (ComboBoxItem)cbJobType.SelectedItem;
             if (cb.Content.ToString().ToLower() != "all")
             {
@@ -83,7 +109,7 @@ namespace finalproject.Admin
                                                          select datatable;
 
                 DataView view = query.AsDataView();
-                var table = view.ToTable(false, "Name", "Job Type", "Date", "Time", "Status", "Account Type");
+                var table = view.ToTable(false, "Id", "Name", "Job Type", "Date", "Time", "Status", "Account Type");
                 grdInfo.ItemsSource = table.AsDataView();
             }
             else
@@ -106,6 +132,7 @@ namespace finalproject.Admin
             cloneSet.Tables["appointment"].Columns["time"].ColumnName = "Time";
             cloneSet.Tables["appointment"].Columns["status"].ColumnName = "Status";
             cloneSet.Tables["appointment"].Columns["accountType"].ColumnName = "Account Type";
+            cloneSet.Tables["appointment"].Columns["id"].ColumnName = "Id";
             ComboBoxItem cb = (ComboBoxItem)cbTime.SelectedItem;
             if (cb.Content.ToString().ToLower() != "all")
             {
@@ -115,7 +142,7 @@ namespace finalproject.Admin
                                                          select datatable;
 
                 DataView view = query.AsDataView();
-                var table = view.ToTable(false, "Name", "Job Type", "Date", "Time", "Status", "Account Type");
+                var table = view.ToTable(false, "Id", "Name", "Job Type", "Date", "Time", "Status", "Account Type");
                 grdInfo.ItemsSource = table.AsDataView();
             }
             else
