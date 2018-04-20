@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace finalproject
 {
@@ -20,6 +23,7 @@ namespace finalproject
     public partial class UserLogin : Window
     {
         private finalproject.User.Users logIn = new finalproject.User.Users();
+        private DataSet dataSet = new DataSet();
         public UserLogin()
         {
             InitializeComponent();
@@ -41,14 +45,17 @@ namespace finalproject
            logIn =  authonticate.AuthonticateUser(LoginEmail.Text, LoginPassword.Text);
             if (logIn.FirstName.ToString() != "" )
             {
-                MessageBox.Show("Login Successfull" + logIn.FirstName.ToString());
-                MessageBox.Show("user type is " + logIn.AccountType.ToString());
+                MessageBox.Show("Welcome Successfull " + logIn.FirstName.ToString());
 
                 if (logIn.AccountType.ToString() == "admin")
                 {
-                    finalproject.Admin.Dashboard dash = new finalproject.Admin.Dashboard();
+                    finalproject.Admin.Dashboard dash = new finalproject.Admin.Dashboard(GetUsersDetails());
                     this.Hide();
                     dash.ShowDialog();
+                }
+                else
+                {
+                    finalproject.User.UserDashbaord userDash = new finalproject.User.UserDashbaord();
                 }
                 
             }
@@ -57,6 +64,16 @@ namespace finalproject
                 MessageBox.Show("Not valid logins");
             }
             
+        }
+
+        public DataSet GetUsersDetails()
+        {
+            
+            XElement xml = XElement.Load(@"..\..\Xmls\appointments.xml");
+            using (var reader = xml.CreateReader())
+                dataSet.ReadXml(reader);
+
+            return dataSet;
         }
 
         private void Register_Click(object sender, RoutedEventArgs e)
