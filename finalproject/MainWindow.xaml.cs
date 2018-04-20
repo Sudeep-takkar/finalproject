@@ -36,6 +36,9 @@ namespace finalproject
         private void btn_JobSeeker_Click(object sender, RoutedEventArgs e)
         {
 
+            finalproject.User.Register reg = new finalproject.User.Register();
+            this.Hide();
+            reg.Show();
         }
     }
 }
