@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<provinces>
+	<province>Ontario</province>
+	<province>Quebec</province>
+	<province>British Columbia</province>
+	<province>Alberta</province>
+	<province>Manitoba</province>
+	<province>Saskatchewan</province>
+	<province>Nova Scotia</province>
+	<province>New Brunswick</province>
+	<province>Newfoundland and Labrador</province>
+	<province>Prince Edward Island</province>
+	<province>Northwest Territories</province>
+	<province>Nunavut</province>
+	<province>Yukon</province>
+	
+</provinces>

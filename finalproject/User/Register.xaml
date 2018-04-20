@@ -5,19 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:finalproject.User"
         mc:Ignorable="d"
-        Title="Register" Height="550" Width="900">
+        Title="Register" Height="550" Width="700">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200*"/>
-            <ColumnDefinition Width="200*"/>
-            <ColumnDefinition Width="200*"/>
-            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="150*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="FirstName" HorizontalAlignment="Left" Height="23" Margin="10,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Grid.Column="1" TextChanged="FirstName_TextChanged"/>
-        <Label HorizontalAlignment="Left" Margin="108.333,79,0,0" VerticalAlignment="Top" Grid.Column="1" Height="10" Width="10"/>
-        <Label Content="First Name" HorizontalAlignment="Left" Margin="70,29,0,0" VerticalAlignment="Top" Width="154" Grid.ColumnSpan="2" Height="25"/>
-        <TextBox x:Name="LastName" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="9.667,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" TextChanged="LastName_TextChanged"/>
-        <Label Content="Last Name" HorizontalAlignment="Left" Margin="69,77,0,0" VerticalAlignment="Top" Width="154" Height="25"/>
+        <TextBox x:Name="FirstName" HorizontalAlignment="Left" Height="23" Margin="10.2,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" Grid.Column="1" TextChanged="FirstName_TextChanged"/>
+        <Label HorizontalAlignment="Left" Margin="108,79,0,0" VerticalAlignment="Top" Grid.Column="1" Height="10" Width="10"/>
+        <Label Content="First Name" Margin="69,34,0,0" VerticalAlignment="Top" Width="80" Height="25" Grid.ColumnSpan="2" HorizontalAlignment="Left" HorizontalContentAlignment="Right"/>
+        <TextBox x:Name="LastName" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10.2,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" TextChanged="LastName_TextChanged"/>
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="69,79,0,0" VerticalAlignment="Top" Width="80" Height="25" Grid.ColumnSpan="2" HorizontalContentAlignment="Right"/>
+        <Label Content="Phone Number" HorizontalAlignment="Left" Margin="58,130,0,0" VerticalAlignment="Top" Width="91" Height="25" Grid.ColumnSpan="2" HorizontalContentAlignment="Right"/>
+        <Label Content="Address 1" HorizontalAlignment="Left" Margin="68.8,34,0,0" VerticalAlignment="Top" Width="95" Height="25" Grid.Column="2" HorizontalContentAlignment="Right"/>
+        <Label Content="Address 2" HorizontalAlignment="Left" Margin="68.8,81,0,0" VerticalAlignment="Top" Width="95" Height="25" Grid.Column="2" HorizontalContentAlignment="Right"/>
+        <Label Content="City" HorizontalAlignment="Left" Margin="73.8,132,0,0" VerticalAlignment="Top" Width="90" Height="25" Grid.Column="2" HorizontalContentAlignment="Right"/>
+        <Label Content="Province" HorizontalAlignment="Left" Margin="68.8,180,0,0" VerticalAlignment="Top" Width="95" Height="25" Grid.Column="2" HorizontalContentAlignment="Right"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="69,180,0,0" VerticalAlignment="Top" Width="70" Height="25" HorizontalContentAlignment="Right"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="69,234,0,0" VerticalAlignment="Top" Width="80" Height="25" Grid.ColumnSpan="2" HorizontalContentAlignment="Right"/>
+        <Label Content="Education" HorizontalAlignment="Left" Margin="69,286,0,0" VerticalAlignment="Top" Width="80" Height="25" Grid.ColumnSpan="2" HorizontalContentAlignment="Right"/>
+        <TextBox x:Name="PhoneNumber" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10.2,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" TextChanged="PhoneNumber_TextChanged"/>
+        <TextBox x:Name="Email" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10.2,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" TextChanged="Email_TextChanged"/>
+        <TextBox x:Name="Password" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10.2,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" TextChanged="Password_TextChanged"/>
+        <TextBox x:Name="Address1" Grid.Column="3" HorizontalAlignment="Left" Height="23" Margin="9.4,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" TextChanged="Address1_TextChanged"/>
+        <TextBox x:Name="Address2" Grid.Column="3" HorizontalAlignment="Left" Height="23" Margin="9.4,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" TextChanged="Address2_TextChanged"/>
+        <TextBox x:Name="City" Grid.Column="3" HorizontalAlignment="Left" Height="23" Margin="9.4,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" TextChanged="City_TextChanged"/>
+        <TextBox x:Name="Education" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10.2,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" TextChanged="Education_TextChanged"/>
+        <Label Content="Job type" HorizontalAlignment="Left" Margin="68.8,290,0,0" VerticalAlignment="Top" Width="95" Height="25" Grid.Column="2" HorizontalContentAlignment="Right"/>
+        <ComboBox x:Name="JobType" Grid.Column="3" HorizontalAlignment="Left" Margin="10.2,289,0,0" VerticalAlignment="Top" Width="128" Height="22" SelectionChanged="JobType_SelectionChanged" SelectedIndex="0"/>
+        <Button Content="Register" Grid.Column="1" HorizontalAlignment="Left" Margin="122.4,417,0,0" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2" Height="39" Click="Button_Click"/>
+        <ComboBox x:Name="Province" Grid.Column="3" HorizontalAlignment="Left" Margin="10.2,183,0,0" VerticalAlignment="Top" Width="128" SelectionChanged="Province_SelectionChanged" SelectedIndex="0"/>
+        <Label Content="Postal Code" HorizontalAlignment="Left" Margin="73.8,241,0,0" VerticalAlignment="Top" Width="95" Height="25" Grid.Column="2" HorizontalContentAlignment="Right"/>
+        <TextBox x:Name="ZipCode" Grid.Column="3" HorizontalAlignment="Left" Height="23" Margin="10.2,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" TextChanged="ZipCode_TextChanged"/>
 
     </Grid>
 </Window>

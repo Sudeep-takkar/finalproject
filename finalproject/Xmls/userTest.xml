@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<users>
+	<user>
+		<firstName>John</firstName>
+		<lastName>Max</lastName>
+		<email>john@gmail.com</email>
+		<password>123456</password>
+		<phone>5195050065</phone>
+		<address1>#45, Test</address1>
+		<address2 />
+		<city>Kitchner</city>
+		<province>Ontario</province>
+		<zipCode>M2F3G6</zipCode>
+		<education>BSc in Cmpouter</education>
+		<jobType>HR</jobType>
+		<userId>1</userId>
+	</user>
+	<user>
+		<firstName>John</firstName>
+		<lastName>Max</lastName>
+		<email>john@gmail.com</email>
+		<password>123456</password>
+		<phone>5195050065</phone>
+		<address1>#45, Test</address1>
+		<address2 />
+		<city>Kitchner</city>
+		<province>Ontario</province>
+		<zipCode>M2F3G6</zipCode>
+		<education>BSc in Cmpouter</education>
+		<jobType>HR</jobType>
+		<userId>2</userId>
+	</user>
+	<user>
+		<firstName>John</firstName>
+		<lastName>lstname</lastName>
+		<email>sdasd</email>
+		<password>dfsd</password>
+		<phone>ssad</phone>
+		<address1>sdfsd</address1>
+		<address2>fsdfs</address2>
+		<city>fdsdf</city>
+		<province> Nova Scotia</province>
+		<zipCode>sdfsdf</zipCode>
+		<education>adsfsdf</education>
+		<jobType> Manager</jobType>
+		<userId>3</userId>
+	</user>
+	<user>
+		<firstName>Hello lk</firstName>
+		<lastName>new nlk</lastName>
+		<email>islkn</email>
+		<password>snln</password>
+		<phone>userlkn</phone>
+		<address1>nlnln</address1>
+		<address2>lknlln</address2>
+		<city>knll</city>
+		<province> Alberta</province>
+		<zipCode>n</zipCode>
+		<education>knl</education>
+		<jobType> QA</jobType>
+		<userId>4</userId>
+	</user>
+</users>
