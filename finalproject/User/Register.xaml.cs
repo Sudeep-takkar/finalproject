@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -24,7 +25,7 @@ namespace finalproject.User
     {
         
         internal List<Users> usersList = new List<Users>();
-        string USERS_FILE_PATH = @"..\..\Xmls\userTest.xml";
+        
         public Register()
         {
             InitializeComponent();
@@ -67,6 +68,15 @@ namespace finalproject.User
 
         private void FirstName_TextChanged(object sender, TextChangedEventArgs e)
         {
+            if (ValdateName(FirstName.Text))
+            {
+                FirstName.BorderBrush = Brushes.Red;
+                FirstName.Focus();
+            }
+            else
+            {
+                FirstName.BorderBrush = Brushes.Black;
+            }
 
         }
 
@@ -157,6 +167,18 @@ namespace finalproject.User
             /************/
         }
 
-
+        private bool ValdateName(string name)
+        {
+            Regex regex = new Regex("[^a-zA-Z]+");
+            if (regex.IsMatch(name))
+            {
+                return true;
+            }
+            if (name == "")
+            {
+                return false;
+            }
+            return false;
+        }
     }
 }
