@@ -59,6 +59,7 @@
     <Compile Include="User\Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
+    <Compile Include="User\Users.cs" />
     <Page Include="Admin\Admin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

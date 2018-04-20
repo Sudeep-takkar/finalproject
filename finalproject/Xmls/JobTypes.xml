@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jobTypes>
+	<jobType>HR</jobType>
+	<jobType>QA</jobType>
+	<jobType>Manager</jobType>
+	<jobType>Tutor</jobType>
+</jobTypes>
