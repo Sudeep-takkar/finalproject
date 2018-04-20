@@ -26,6 +26,7 @@ namespace finalproject.User
         
         internal List<Users> usersList = new List<Users>();
         public string USER_DATA = @"..\..\Xmls\user.xml";
+        private finalproject.User.Users logIn = new finalproject.User.Users();
         public Register()
         {
             InitializeComponent();
@@ -180,8 +181,8 @@ namespace finalproject.User
                 xmlObject.WriteElementString("education", user.Education);
                 xmlObject.WriteElementString("jobType", user.JobType);
                 xmlObject.WriteElementString("userId", userId.ToString());
+                xmlObject.WriteElementString("accountType", "user");
                 xmlObject.WriteEndElement();
-
                 userId++;
             }
             xmlObject.WriteEndElement();
@@ -201,6 +202,13 @@ namespace finalproject.User
                 return false;
             }
             return false;
+        }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            finalproject.UserLogin userLogin = new finalproject.UserLogin();
+            this.Hide();
+            userLogin.Show();
         }
     }
 }

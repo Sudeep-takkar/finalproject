@@ -20,6 +20,9 @@ namespace finalproject.User
         private string province;
         private string jobType;
         private string zipCode;
+        private string accountType;
+        private string userId;
+
 
         public Users( string firstName, string lastName, string phoneNumber, string email, string password, string education, string address1, string address2, string city, string province, string zipCode, string jobType)
         {
@@ -49,12 +52,27 @@ namespace finalproject.User
         public string Province { get => province; set => province = value; }
         public string JobType { get => jobType; set => jobType = value; }
         public string ZipCode { get => zipCode; set => zipCode = value; }
+        public string AccountType { get => accountType; set => accountType = value; }
+        public string UserId { get => userId; set => userId = value; }
 
         public override string ToString()
         {
             // Next line is for debugging
             //return string.Format("{0}, {1} , {2} , {3} , {4} , {5} , {6} , {7} , {8} , {9} , {10}, {11}", firstName, lastName, phoneNumber, email,password,education,address1,address2,city,province, zipCode, jobType);
             return string.Format("Thanks {0} {1}, for registeration for the job of {2} !", firstName, lastName, jobType );
+        }
+
+        public void LogIn( string userId, string accountType, string firstName, string lastName, string email)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.email = email;
+            this.accountType = accountType;
+            this.userId = userId;
+        }
+
+        public Users()
+        {
         }
     }
 }
