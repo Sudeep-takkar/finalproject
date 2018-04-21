@@ -14,7 +14,7 @@
 		<education>Owner</education>
 		<jobType>Admin</jobType>
 		<userId>1</userId>
-		<accountType>user</accountType>
+		<accountType>admin</accountType>
 	</user>
 	<user>
 		<firstName>Test</firstName>

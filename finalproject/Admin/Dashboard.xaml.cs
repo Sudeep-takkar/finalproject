@@ -48,8 +48,6 @@ namespace finalproject.Admin
             //DataSet ds = new DataSet();
             ////ds.Tables[0].Rows.Cast<DataRow>().Where(
             ////    r => r.ItemArray[0] == e.Row("Id")).ToList().ForEach(r => r.Delete());
-            string x = e.Row.GetIndex().ToString();
-            string y = e.Column.DisplayIndex.ToString();
             //MessageBox.Show(grdInfo.SelectedValue.ToString(), );
             //if (grdInfo.Columns[e.Column.DisplayIndex].ToString() == "Reference")
             //{
@@ -60,8 +58,26 @@ namespace finalproject.Admin
             //ds.WriteXml("your path here");
             //DataSet ds = new DataSet("abc");
             //ds.ReadXml("abcd.xml");
-
             //dataGrid1.DataSource = ds.Tables[0];
+
+            int x = e.Row.GetIndex();
+            int y = e.Column.DisplayIndex;
+            DataSet cloneSet = ds2.Copy();
+
+            EnumerableRowCollection<DataRow> query2 = from datatable in cloneSet.Tables[0].AsEnumerable()
+                                                     orderby datatable.Field<string>("Name")
+                                                     select datatable;
+            DataView view = query2.AsDataView();
+            var table = view.ToTable(false, "Id", "Name", "JobType", "Date", "Time", "Status");
+
+
+            DataRow[] query = table.Select();
+
+            query[x].Delete();
+            table.AcceptChanges();
+            Default();
+            //grdInfo.ItemsSource = table.AsDataView();
+            //ds2.Tables[0] = table;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -84,13 +100,13 @@ namespace finalproject.Admin
             cloneSet.Tables["appointment"].Columns["date"].ColumnName = "Date";
             cloneSet.Tables["appointment"].Columns["time"].ColumnName = "Time";
             cloneSet.Tables["appointment"].Columns["status"].ColumnName = "Status";
-            cloneSet.Tables["appointment"].Columns["accountType"].ColumnName = "Account Type";
+            //cloneSet.Tables["appointment"].Columns["accountType"].ColumnName = "Account Type";
             cloneSet.Tables["appointment"].Columns["id"].ColumnName = "Id";
             EnumerableRowCollection<DataRow> query = from datatable in cloneSet.Tables[0].AsEnumerable()
                                                      orderby datatable.Field<string>("Name")
                                                      select datatable;
             DataView view = query.AsDataView();
-            var table = view.ToTable(false,"Id", "Name", "Job Type", "Date", "Time", "Status", "Account Type");
+            var table = view.ToTable(false,"Id", "Name", "Job Type", "Date", "Time", "Status");
             grdInfo.ItemsSource = table.AsDataView();
         }
 
@@ -102,7 +118,7 @@ namespace finalproject.Admin
             cloneSet.Tables["appointment"].Columns["date"].ColumnName = "Date";
             cloneSet.Tables["appointment"].Columns["time"].ColumnName = "Time";
             cloneSet.Tables["appointment"].Columns["status"].ColumnName = "Status";
-            cloneSet.Tables["appointment"].Columns["accountType"].ColumnName = "Account Type";
+            //cloneSet.Tables["appointment"].Columns["accountType"].ColumnName = "Account Type";
             cloneSet.Tables["appointment"].Columns["id"].ColumnName = "Id";
             ComboBoxItem cb = (ComboBoxItem)cbJobType.SelectedItem;
             if (cb.Content.ToString().ToLower() != "all")
@@ -113,7 +129,7 @@ namespace finalproject.Admin
                                                          select datatable;
 
                 DataView view = query.AsDataView();
-                var table = view.ToTable(false, "Id", "Name", "Job Type", "Date", "Time", "Status", "Account Type");
+                var table = view.ToTable(false, "Id", "Name", "Job Type", "Date", "Time", "Status");
                 grdInfo.ItemsSource = table.AsDataView();
             }
             else
@@ -135,7 +151,6 @@ namespace finalproject.Admin
             cloneSet.Tables["appointment"].Columns["date"].ColumnName = "Date";
             cloneSet.Tables["appointment"].Columns["time"].ColumnName = "Time";
             cloneSet.Tables["appointment"].Columns["status"].ColumnName = "Status";
-            cloneSet.Tables["appointment"].Columns["accountType"].ColumnName = "Account Type";
             cloneSet.Tables["appointment"].Columns["id"].ColumnName = "Id";
             ComboBoxItem cb = (ComboBoxItem)cbTime.SelectedItem;
             if (cb.Content.ToString().ToLower() != "all")
@@ -146,7 +161,7 @@ namespace finalproject.Admin
                                                          select datatable;
 
                 DataView view = query.AsDataView();
-                var table = view.ToTable(false, "Id", "Name", "Job Type", "Date", "Time", "Status", "Account Type");
+                var table = view.ToTable(false, "Id", "Name", "Job Type", "Date", "Time", "Status");
                 grdInfo.ItemsSource = table.AsDataView();
             }
             else

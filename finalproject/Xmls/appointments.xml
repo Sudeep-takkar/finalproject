@@ -6,11 +6,9 @@
     <email>1</email>
     <password>1</password>
     <jobType>Software Engineer</jobType>
-    <accountType>Admin</accountType>
     <date>2018-04-01</date>
     <time>10:30 AM</time>
     <status>InProcess</status>
-    <account>1</account>
   </appointment>
   <appointment>
     <id>2</id>
@@ -18,11 +16,9 @@
     <email>1</email>
     <password>12</password>
     <jobType>HR</jobType>
-    <accountType>User</accountType>
     <date>2018-04-01</date>
     <time>10:00 AM</time>
     <status>InProsess</status>
-    <account>2</account>
   </appointment>
   <appointment>
     <id>3</id>
@@ -30,11 +26,9 @@
     <email>1</email>
     <password>123</password>
     <jobType>Quality Analyst</jobType>
-    <accountType>User</accountType>
     <date>2018-04-01</date>
     <time>10:30 PM</time>
     <status>InProsess</status>
-    <account>2</account>
   </appointment>
   <appointment>
     <id>4</id>
@@ -42,20 +36,16 @@
     <email>1</email>
     <password>124</password>
     <jobType>HR</jobType>
-    <accountType>User</accountType>
     <date>2018-04-01</date>
     <time>10:30 PM</time>
-    <account>2</account>
     <status>InProsess</status>
   </appointment>
   <appointment>
     <id>6</id>
     <name>John</name>
     <email>1</email>
-    <account>2</account>
     <password>1256</password>
     <jobType>HR</jobType>
-    <accountType>User</accountType>
     <date>2018-04-01</date>
     <time>10:30 PM</time>
     <status>InProsess</status>
@@ -66,9 +56,7 @@
     <email>1</email>
     <password>111</password>
     <jobType>HR</jobType>
-    <accountType>User</accountType>
     <date>2018-04-01</date>
-    <account>2</account>
     <time>10:30 PM</time>
     <status>InProsess</status>
   </appointment>
@@ -79,11 +67,9 @@
     <password>122222</password>
     <jobType>HR</jobType>
     <account>User</account>
-    <accountType>User</accountType>
     <date>2018-04-01</date>
     <time>10:30 PM</time>
     <status>InProsess</status>
-    <account>2</account>
   </appointment>
   <appointment>
     <id>9</id>
@@ -91,8 +77,6 @@
     <jobType>HR</jobType>
     <email>1</email>
     <password>92</password>
-    <accountType>User</accountType>
-    <account>2</account>
     <date>2018-04-01</date>
     <time>10:30 PM</time>
     <status>InProsess</status>

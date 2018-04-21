@@ -45,7 +45,7 @@ namespace finalproject
            logIn =  authonticate.AuthonticateUser(LoginEmail.Text, LoginPassword.Text);
             if (logIn.FirstName.ToString() != "" )
             {
-                MessageBox.Show("Welcome Successfull " + logIn.FirstName.ToString());
+                MessageBox.Show("Welcome " + logIn.FirstName.ToString());
 
                 if (logIn.AccountType.ToString() == "admin")
                 {
