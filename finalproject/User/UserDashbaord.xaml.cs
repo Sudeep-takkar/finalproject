@@ -85,5 +85,10 @@ namespace finalproject.User
             this.Hide();
             appointment.Show();
         }
+
+        private void DataGridDetail_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

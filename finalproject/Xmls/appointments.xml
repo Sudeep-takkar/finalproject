@@ -20,4 +20,14 @@
 		<status>InProgress</status>
 		<userId>2</userId>
 	</appointment>
+	<appointment>
+		<id>3</id>
+		<name>Test User</name>
+		<email>t</email>
+		<jobType> Manager</jobType>
+		<date>4/19/2018</date>
+		<time>12:00</time>
+		<status>InProgress</status>
+		<userId>2</userId>
+	</appointment>
 </appointments>

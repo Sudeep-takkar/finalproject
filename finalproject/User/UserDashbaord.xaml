@@ -15,14 +15,13 @@
         <Label x:Name="Welcome" Content="Welcome" HorizontalAlignment="Left" Margin="17,10,0,0" VerticalAlignment="Top" Width="62" Height="26"/>
         <TextBox x:Name="UserName" HorizontalAlignment="Left" Height="23" Margin="17,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="69" TextChanged="UserName_TextChanged"/>
         <Button x:Name="BookAppointment" Content="Book Appointment" Grid.Column="1" HorizontalAlignment="Left" Margin="230,16,0,0" VerticalAlignment="Top" Width="119" Click="BookAppointment_Click"/>
-        <DataGrid x:Name="DataGridDetail"  Grid.ColumnSpan="2" Height="145" Margin="0,504,0,70">
+        <DataGrid x:Name="DataGridDetail" Height="145" Margin="10,52,17,172" Grid.Column="1" SelectionChanged="DataGridDetail_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Date" Width="100" Binding="{Binding date}"/>
-                <DataGridTextColumn Header="Vehicle" Width="120" Binding="{Binding time}"/>
-                <DataGridTextColumn Header="Year" Width="120" Binding="{Binding status}"/>
+                <DataGridTextColumn Header="Time" Width="100" Binding="{Binding time}"/>
+                <DataGridTextColumn Header="Status" Width="100" Binding="{Binding status}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid Grid.Column="1" HorizontalAlignment="Left" Height="116" Margin="10,55,0,0" VerticalAlignment="Top" Width="363"/>
 
     </Grid>
 </Window>

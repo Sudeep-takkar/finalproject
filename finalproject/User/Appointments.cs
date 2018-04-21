@@ -27,6 +27,13 @@ namespace finalproject.User
             this.userId = userId;
         }
 
+        public Appointments(string date, string time, string status)
+        {
+            this.Date = date;
+            this.Time = time;
+            this.Status = status;
+        }
+
         public string Name { get => name; set => name = value; }
         public string Email { get => email; set => email = value; }
         public string JobType { get => jobType; set => jobType = value; }
