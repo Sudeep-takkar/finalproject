@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session>
+	<user>
+		<firstName>Test</firstName>
+		<lastName>User</lastName>
+		<email>t</email>
+		<phone>312456789</phone>
+		<address1>Addressline1</address1>
+		<address2>Address line2</address2>
+		<city>Bramma</city>
+		<province> Manitoba</province>
+		<zipCode>625DG56</zipCode>
+		<education>Education</education>
+		<jobType> Manager</jobType>
+		<userId>2</userId>
+	</user>
+</session>

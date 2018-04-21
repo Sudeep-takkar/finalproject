@@ -59,20 +59,37 @@ namespace finalproject.User
         {
             // Next line is for debugging
             //return string.Format("{0}, {1} , {2} , {3} , {4} , {5} , {6} , {7} , {8} , {9} , {10}, {11}", firstName, lastName, phoneNumber, email,password,education,address1,address2,city,province, zipCode, jobType);
-            return string.Format("Thanks {0} {1}, for registeration for the job of {2} !", firstName, lastName, jobType );
+            return string.Format("Thanks {0} {1}, for registeration for the job of {2} ! ", firstName, lastName, jobType );
         }
 
-        public void LogIn( string userId, string accountType, string firstName, string lastName, string email)
+        public void LogIn( string userId, string accountType, string firstName, string lastName, string email, string jobType, string phone, string address1, string address2, string city, string province, string zipCode, string education, string phoneNumber)
         {
             this.firstName = firstName;
             this.lastName = lastName;
             this.email = email;
             this.accountType = accountType;
             this.userId = userId;
+            this.education = education;
+            this.address1 = address1;
+            this.address2 = address2;
+            this.city = city;
+            this.province = province;
+            this.jobType = jobType;
+            this.zipCode = zipCode;
+            this.phoneNumber = phoneNumber;
         }
 
         public Users()
         {
+        }
+
+        public Users GetUserDetails(string userId)
+        {
+            //Console.WriteLine(userId);
+            Authonticate authonticate = new Authonticate();
+            Users user =  authonticate.GetUsersDetails(userId);
+            Console.WriteLine(user.FirstName);
+            return user;
         }
     }
 }

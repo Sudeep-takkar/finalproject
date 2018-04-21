@@ -13,7 +13,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml;
 using System.Xml.Linq;
+using finalproject.User;
 
 namespace finalproject
 {
@@ -24,11 +26,13 @@ namespace finalproject
     {
         private finalproject.User.Users logIn = new finalproject.User.Users();
         private DataSet dataSet = new DataSet();
+        //private finalproject.User.Users userObject = null;  
+        private string USER_SESSION = @"..\..\Xmls\userSession.xml";
+
         public UserLogin()
         {
             InitializeComponent();
         }
-
         private void LoginEmail_TextChanged(object sender, TextChangedEventArgs e)
         {
 
@@ -45,8 +49,8 @@ namespace finalproject
            logIn =  authonticate.AuthonticateUser(LoginEmail.Text, LoginPassword.Text);
             if (logIn.FirstName.ToString() != "" )
             {
-                MessageBox.Show("Welcome Successfull " + logIn.FirstName.ToString());
-
+                MessageBox.Show("Welcome back " + logIn.FirstName.ToString());
+                 SaveUserSession(logIn);
                 if (logIn.AccountType.ToString() == "admin")
                 {
                     finalproject.Admin.Dashboard dash = new finalproject.Admin.Dashboard(GetUsersDetails());
@@ -55,9 +59,10 @@ namespace finalproject
                 }
                 else
                 {
-                    finalproject.User.UserDashbaord userDash = new finalproject.User.UserDashbaord();
+                    finalproject.User.UserDashbaord userDash = new finalproject.User.UserDashbaord(logIn.UserId.ToString());
+                    this.Hide();
+                    userDash.Show();
                 }
-                
             }
             else
             {
@@ -82,5 +87,33 @@ namespace finalproject
             this.Hide();
             userRegister.Show();
         }
+        private void SaveUserSession(finalproject.User.Users user)
+        {
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.Indent = true;
+            settings.IndentChars = "\t";
+            XmlWriter xmlObject = XmlWriter.Create(USER_SESSION, settings);
+            xmlObject.WriteStartDocument();
+
+            xmlObject.WriteStartElement("session");
+
+                xmlObject.WriteStartElement("user");
+                xmlObject.WriteElementString("firstName", user.FirstName);
+                xmlObject.WriteElementString("lastName", user.LastName);
+                xmlObject.WriteElementString("email", user.Email);
+                xmlObject.WriteElementString("phone", user.PhoneNumber);
+                xmlObject.WriteElementString("address1", user.Address1);
+                xmlObject.WriteElementString("address2", user.Address2);
+                xmlObject.WriteElementString("city", user.City);
+                xmlObject.WriteElementString("province", user.Province);
+                xmlObject.WriteElementString("zipCode", user.ZipCode);
+                xmlObject.WriteElementString("education", user.Education);
+                xmlObject.WriteElementString("jobType", user.JobType);
+                xmlObject.WriteElementString("userId", user.UserId);
+                xmlObject.WriteEndElement();
+            xmlObject.WriteEndElement();
+            xmlObject.Close();   
+        }
+
     }
 }

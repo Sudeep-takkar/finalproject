@@ -19,8 +19,8 @@
 	<user>
 		<firstName>Test</firstName>
 		<lastName>User</lastName>
-		<email>test@gmail.com</email>
-		<password>123456</password>
+		<email>t</email>
+		<password>t</password>
 		<phone>312456789</phone>
 		<address1>Addressline1</address1>
 		<address2>Address line2</address2>

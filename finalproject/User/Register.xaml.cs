@@ -144,17 +144,18 @@ namespace finalproject.User
         {
             Users userObject = new Users(FirstName.Text, LastName.Text, PhoneNumber.Text, Email.Text, Password.Text, Education.Text, Address1.Text, Address2.Text, City.Text, Province.Text, ZipCode.Text, JobType.Text);
             usersList.Add(userObject);
-
+            // override method
             MessageBox.Show(userObject.ToString());
-            
             SaveUsers();
+            finalproject.UserLogin userLogin = new finalproject.UserLogin();
+            this.Hide();
+            userLogin.Show();
+
         }
         private void SaveUsers()
         {
 
-            int userId = 1;
-            
-            
+            int userId = 1;            
             /************/
             XmlWriterSettings settings = new XmlWriterSettings();
             settings.Indent = true;
@@ -162,8 +163,6 @@ namespace finalproject.User
             XmlWriter xmlObject = XmlWriter.Create(USER_DATA, settings);
             xmlObject.WriteStartDocument();
             xmlObject.WriteStartElement("users");
-
-            
 
             foreach (var user in usersList)
             {
