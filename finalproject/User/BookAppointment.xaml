@@ -8,7 +8,7 @@
         Title="BookAppointment" Height="300" Width="500">
     <Grid>
         <Button x:Name="GoBack" Content="Go back" HorizontalAlignment="Left" Margin="364,10,0,0" VerticalAlignment="Top" Width="75" Click="GoBack_Click"/>
-        <DatePicker x:Name="SelectDate" HorizontalAlignment="Left" Margin="101,71,0,0" VerticalAlignment="Top" Width="120"/>
+        <DatePicker x:Name="SelectDate" HorizontalAlignment="Left" Margin="101,71,0,0" VerticalAlignment="Top" Width="120" DisplayDate="2018-04-20"/>
         <ComboBox x:Name="ChooseTimeSlot" HorizontalAlignment="Left" Margin="101,122,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ChooseTimeSlot_SelectionChanged" SelectedIndex="0"/>
         <Button x:Name="ConfirmAppoint" Content="Confirm" HorizontalAlignment="Left" Margin="101,179,0,0" VerticalAlignment="Top" Width="120" Click="ConfirmAppoint_Click"/>
 

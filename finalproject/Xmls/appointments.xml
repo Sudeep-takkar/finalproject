@@ -1,84 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <appointments>
-  <appointment>
-    <id>1</id>
-    <name>John X</name>
-    <email>1</email>
-    <password>1</password>
-    <jobType>Software Engineer</jobType>
-    <date>2018-04-01</date>
-    <time>10:30 AM</time>
-    <status>InProcess</status>
-  </appointment>
-  <appointment>
-    <id>2</id>
-    <name>John</name>
-    <email>1</email>
-    <password>12</password>
-    <jobType>HR</jobType>
-    <date>2018-04-01</date>
-    <time>10:00 AM</time>
-    <status>InProsess</status>
-  </appointment>
-  <appointment>
-    <id>3</id>
-    <name>John</name>
-    <email>1</email>
-    <password>123</password>
-    <jobType>Quality Analyst</jobType>
-    <date>2018-04-01</date>
-    <time>10:30 PM</time>
-    <status>InProsess</status>
-  </appointment>
-  <appointment>
-    <id>4</id>
-    <name>John</name>
-    <email>1</email>
-    <password>124</password>
-    <jobType>HR</jobType>
-    <date>2018-04-01</date>
-    <time>10:30 PM</time>
-    <status>InProsess</status>
-  </appointment>
-  <appointment>
-    <id>6</id>
-    <name>John</name>
-    <email>1</email>
-    <password>1256</password>
-    <jobType>HR</jobType>
-    <date>2018-04-01</date>
-    <time>10:30 PM</time>
-    <status>InProsess</status>
-  </appointment>
-  <appointment>
-    <id>7</id>
-    <name>John</name>
-    <email>1</email>
-    <password>111</password>
-    <jobType>HR</jobType>
-    <date>2018-04-01</date>
-    <time>10:30 PM</time>
-    <status>InProsess</status>
-  </appointment>
-  <appointment>
-    <id>8</id>
-    <name>John</name>
-    <email>1</email>
-    <password>122222</password>
-    <jobType>HR</jobType>
-    <account>User</account>
-    <date>2018-04-01</date>
-    <time>10:30 PM</time>
-    <status>InProsess</status>
-  </appointment>
-  <appointment>
-    <id>9</id>
-    <name>John</name>
-    <jobType>HR</jobType>
-    <email>1</email>
-    <password>92</password>
-    <date>2018-04-01</date>
-    <time>10:30 PM</time>
-    <status>InProsess</status>
-  </appointment>
+	<appointment>
+		<id>1</id>
+		<name>Test User</name>
+		<email>t</email>
+		<jobType> Manager</jobType>
+		<date>4/18/2018</date>
+		<time>12:00</time>
+		<status>InProgress</status>
+		<userId>2</userId>
+	</appointment>
+	<appointment>
+		<id>2</id>
+		<name>Test User</name>
+		<email>t</email>
+		<jobType> Manager</jobType>
+		<date>4/24/2018</date>
+		<time>12:00</time>
+		<status>InProgress</status>
+		<userId>2</userId>
+	</appointment>
 </appointments>

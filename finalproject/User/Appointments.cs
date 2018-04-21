@@ -14,9 +14,9 @@ namespace finalproject.User
         private string date;
         private string time;
         private string status;
-        private string account;
+        private string userId;
 
-        public Appointments(string name, string email, string jobType, string date, string time, string status, string account)
+        public Appointments(string name, string email, string jobType, string date, string time, string status, string userId)
         {
             this.Name = name;
             this.Email = email;
@@ -24,7 +24,7 @@ namespace finalproject.User
             this.Date = date;
             this.Time = time;
             this.Status = status;
-            this.Account = account;
+            this.userId = userId;
         }
 
         public string Name { get => name; set => name = value; }
@@ -33,7 +33,7 @@ namespace finalproject.User
         public string Date { get => date; set => date = value; }
         public string Time { get => time; set => time = value; }
         public string Status { get => status; set => status = value; }
-        public string Account { get => account; set => account = value; }
+        public string UserId { get => userId; set => userId = value; }
     }
 
 }
