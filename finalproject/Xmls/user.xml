@@ -32,4 +32,36 @@
 		<userId>2</userId>
 		<accountType>user</accountType>
 	</user>
+	<user>
+		<firstName>s</firstName>
+		<lastName>a</lastName>
+		<email>a</email>
+		<password>a</password>
+		<phone>a</phone>
+		<address1>a</address1>
+		<address2>a</address2>
+		<city>a</city>
+		<province> Ontario</province>
+		<zipCode>qw</zipCode>
+		<education>a</education>
+		<jobType> HR</jobType>
+		<userId>3</userId>
+		<accountType>user</accountType>
+	</user>
+	<user>
+		<firstName>wq</firstName>
+		<lastName>weq</lastName>
+		<email>we</email>
+		<password>ewq</password>
+		<phone>7894561230</phone>
+		<address1>we</address1>
+		<address2>ew</address2>
+		<city>qe</city>
+		<province> Ontario</province>
+		<zipCode>qw</zipCode>
+		<education>we</education>
+		<jobType> HR</jobType>
+		<userId>5</userId>
+		<accountType>user</accountType>
+	</user>
 </users>

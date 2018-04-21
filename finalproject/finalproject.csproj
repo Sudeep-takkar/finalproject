@@ -57,6 +57,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Authonticate.cs" />
+    <Compile Include="User\ContactConverter.cs" />
+    <Compile Include="User\ContactValidationRule.cs" />
     <Compile Include="UserLogin.xaml.cs">
       <DependentUpon>UserLogin.xaml</DependentUpon>
     </Compile>

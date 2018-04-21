@@ -49,8 +49,6 @@ namespace finalproject
            logIn =  authonticate.AuthonticateUser(LoginEmail.Text, LoginPassword.Text);
             if (logIn.FirstName.ToString() != "" )
             {
-                MessageBox.Show("Welcome back " + logIn.FirstName.ToString());
-                 SaveUserSession(logIn);
                 if (logIn.AccountType.ToString() == "admin")
                 {
                     finalproject.Admin.Dashboard dash = new finalproject.Admin.Dashboard(GetUsersDetails());
