@@ -142,12 +142,128 @@ namespace finalproject.User
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Users userObject = new Users(FirstName.Text, LastName.Text, PhoneNumber.Text, Email.Text, Password.Text, Education.Text, Address1.Text, Address2.Text, City.Text, Province.Text, ZipCode.Text, JobType.Text);
-            usersList.Add(userObject);
+            //Users userObject = new Users(FirstName.Text, LastName.Text, PhoneNumber.Text, Email.Text, Password.Text, Education.Text, Address1.Text, Address2.Text, City.Text, Province.Text, ZipCode.Text, JobType.Text);
+            //usersList.Add(userObject);
 
-            MessageBox.Show(userObject.ToString());
-            
-            SaveUsers();
+            //MessageBox.Show(userObject.ToString());
+
+            //SaveUsers();
+
+            Users userObject = null;
+            bool conditionForSavingData = !string.IsNullOrEmpty(FirstName.Text) && !string.IsNullOrEmpty(PhoneNumber.Text)
+                && !string.IsNullOrEmpty(Email.Text) && !string.IsNullOrEmpty(Password.Text) && !string.IsNullOrEmpty(Education.Text)
+                && !string.IsNullOrEmpty(Address1.Text) && !string.IsNullOrEmpty(City.Text) && (!string.IsNullOrEmpty(Province.Text) || Province.Text == "Select Province")
+                && !string.IsNullOrEmpty(ZipCode.Text) && (!string.IsNullOrEmpty(JobType.Text) || JobType.Text == "Select Job Type");
+            if (string.IsNullOrEmpty(FirstName.Text))
+            {
+                lblFname.Foreground = Brushes.Red;
+            }
+            else
+            {
+                lblFname.Foreground = Brushes.Black;
+            }
+            if (string.IsNullOrEmpty(Email.Text))
+            {
+                lblEmail.Foreground = Brushes.Red;
+            }
+            else
+            {
+                lblEmail.Foreground = Brushes.Black;
+            }
+            if (string.IsNullOrEmpty(Password.Text))
+            {
+                lblPassword.Foreground = Brushes.Red;
+            }
+            else
+            {
+                lblPassword.Foreground = Brushes.Black;
+            }
+            if (string.IsNullOrEmpty(Education.Text))
+            {
+                lblEducation.Foreground = Brushes.Red;
+            }
+            else
+            {
+                lblEducation.Foreground = Brushes.Black;
+            }
+            if (string.IsNullOrEmpty(Address1.Text))
+            {
+                lblAdd1.Foreground = Brushes.Red;
+            }
+            else
+            {
+                lblAdd1.Foreground = Brushes.Black;
+            }
+
+            if (string.IsNullOrEmpty(PhoneNumber.Text))
+            {
+                lblContact.Foreground = Brushes.Red;
+                conditionForSavingData = false;
+            }
+            else
+            {
+                UInt64 x = 0;
+                UInt64.TryParse(PhoneNumber.Text, out x);
+
+                if (x == 0)
+                {
+                    conditionForSavingData = false;
+                    MessageBox.Show("Data type of Phone number is not correct.");
+                    lblContact.Foreground = Brushes.Red;
+                }
+                else if (x < 1000000000 || x > 10000000000)
+                {
+                    lblContact.Foreground = Brushes.Red;
+                    conditionForSavingData = false;
+                    MessageBox.Show("Contact number must be of 10 digits.");
+                }
+                else
+                {
+                    lblContact.Foreground = Brushes.Black;
+                }
+
+            }
+            if (string.IsNullOrEmpty(City.Text))
+            {
+                lblCity.Foreground = Brushes.Red;
+            }
+            else
+            {
+                lblCity.Foreground = Brushes.Black;
+            }
+            if (string.IsNullOrEmpty(Province.Text) || Province.Text == "Select Province")
+            {
+                lblProvince.Foreground = Brushes.Red;
+            }
+            else
+            {
+                lblProvince.Foreground = Brushes.Black;
+            }
+            if (string.IsNullOrEmpty(ZipCode.Text))
+            {
+                lblCode.Foreground = Brushes.Red;
+            }
+            else
+            {
+                lblCode.Foreground = Brushes.Black;
+            }
+            if (string.IsNullOrEmpty(JobType.Text) || JobType.Text == "Select Job Type")
+            {
+                lblJobType.Foreground = Brushes.Red;
+            }
+            else
+            {
+                lblJobType.Foreground = Brushes.Black;
+            }
+            if (conditionForSavingData)
+            {
+                userObject = new Users(FirstName.Text, LastName.Text, PhoneNumber.Text, Email.Text, Password.Text, Education.Text, Address1.Text, Address2.Text, City.Text, Province.Text, ZipCode.Text, JobType.Text);
+                usersList.Add(userObject);
+
+                MessageBox.Show(userObject.ToString());
+
+                SaveUsers();
+            }
         }
         private void SaveUsers()
         {
